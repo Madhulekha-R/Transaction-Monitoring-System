@@ -4,120 +4,83 @@
 
 ## TABLE OF CONTENTS
 
+- [Abstract](#abstract)
+- [Requirement Analysis](#requirement-analysis)
 - [About the Project](#about-the-project)
-- [Dataset Description](#dataset-description)
-- [Model Implementation](#model-implementation)
-- [Model Evaluation](#model-evaluation)
-- [Results](#results)
+- [Flowchart](#flowchart)
+- [Execution Screenshot](#execution-screenshot)
 - [Conclusion](#conclusion)
-- [Libraries Used](#libraries-used)
 - [Contact](#contact)
 
-### ABOUT THE PROJECT : 
+### ABSTRACT: 
 
-The project 'Transaction Monitoring System' is designed behind the main theme of monitorization of fund transfers. With this software, Banks can identify the illegal funds transfers between Indian banks or between Abroad to India and vice versa. The functional requirements are quite implemented using
-software in the system.
-The backend comprises the space to store details of people indulged themselves
-in illegal fund transfers. While front end comprises the space for capturing
-mandatory details to carry out transactions. When a Bank receives funds from
-another account, the software matches the details of remitter with in-built
-database created using the backend. Thus, the software will allow or disallow
-the transactions based on the matches from database.
-### DATASET DESCRIPTION:
+The project **Transaction Monitoring System** is designed behind the main theme of monitorization of fund transfers. With this software, Banks can identify the illegal funds transfers between Indian banks or between Abroad to India and vice versa. The functional requirements are quite implemented using software in the system. The backend comprises the space to store details of people indulged themselves in illegal fund transfers. While front end comprises the space for capturing mandatory details to carry out transactions. When a Bank receives funds from another account, the software matches the details of remitter with in-built database created using the backend. Thus, the software will allow or disallow the transactions based on the matches from database.
 
-The dataset is been taken from **Kaggle** for the research paper. And the dataset incudes following attributes within it.</br>
+### REQUIREMENT ANALYSIS:
 
-- **id** : Personal identification number (Unique)</br>
-- **age** : Age of the patient (Continuous)</br>
-- **gender** : Male or Female (Nominal)</br>
-- **height** : Height of the patient (Continuous)</br>
-- **weight** : Weight of the patient (Continuous)</br>
-- **ap_hi** : Systolic blood pressure of the patient</br>
-- **ap_lo** : Diastolic blood pressure of the patient</br>
-- **cholesterol** : Cholestral of the patient</br>
-- **gluc** : Glucose level of the patient</br>
-- **smoke** : Smoking status of the patient</br>
-- **alco** :  Alcohol consumption of the patient</br>
-- **active** : Physical activity level of the patient</br>
-- **cardio** : Cardio metrics of the patient</br>
+- **Operating System**: Windows 11</br>
+- **Frontend**: IDLE Python (3.8 32-bit)</br>
+- **Backend**: MySQL 8.0 Command Line Client
 
-### MODEL IMPLEMENTATION:
+### ABOUT THE PROJECT:
 
-**Five** models were implemented on the scaled data. The models were:
+The frontend and backend comprises necessary information to monitor the fund transfers. The project developed is interwined with various several modules namely: 
 
-Logistic Regression
-Decision Tree
-K-Nearest Neighbours
-Support Vector Machine
-Random Forest
+- **Details of account holders**</br>
+- **Interfacing python and MySQL**</br>
+- **Authentication process**</br>
 
-### MODEL EVALUATION:
+Of course, some the modules have many sub module in it too, to ensure the strong validation of authentication process. 
 
-Here's the flowchart that represents the flow of the project:
+- In the module named **Details of account holders**, the data of account holders are been collected as input. 
+- In the second module named **Interfacing Python and MySQL**, the Python and MySQL are interwined with each other using the necessary code. 
+- And in the last module named **Authentication process**, the verification and acknowledgement process are done to verify the details. 
 
-![image](https://github.com/user-attachments/assets/6f045626-48f1-45fd-b1b7-12822a9b5c84)
+Finally, the approval message for fund transaction will be auditioned based on the reflection of matches between details taken in frontend and databases in backend. If the match is found, then the approval will not be provided. While if the match is not found, the approval will be provided for fund transfer and further processes will be in process.
 
-## RESULTS:
+#### SQL DATABASES:
 
-On implementing various machine learning algorithms over the dataset, ended up with the following output.
+A database named rbi and many tables are been created using the SQL commands. Some of the screenshots of the databases are given below:
 
-**LOGISTIC REGRESSION** : Logistic Regression is a machine learning algorithm that measures the relationship between the dependent variable and one or more independent variable by estimating probabilities using logistic function</br>
+![image](https://github.com/user-attachments/assets/7be3b4d6-5940-4f89-b2cc-9bf3819d3871)</br>
 
- Classification report:</br>
- ![image](https://github.com/user-attachments/assets/d54e2730-cf6b-46fd-a535-0bbd15d0f937)</br>
- 
- Accuracy Rate:</br>
- ![image](https://github.com/user-attachments/assets/2190b3d3-ef95-42f0-ae89-f381997921f3)</br>
+**Table 1: abc_holders**
 
-**SUPPORT VECTOR MACHINE**: The Support Vector Machine training algorithm builds a model that assigns new test samples to one category or other, making it a non-probabilistic binary linear classification.</br>
+![image](https://github.com/user-attachments/assets/5b437ec9-915a-42b7-ad4c-e94c7d57468e)</br>
 
- Classification report:</br>
- ![image](https://github.com/user-attachments/assets/d5e45069-e452-44f4-adfb-f9b066713c9c)</br>
- 
- Confusion matrix:</br>
- ![image](https://github.com/user-attachments/assets/2bd4ddeb-0c86-4ecc-aaf4-4aaab9cb3afb)</br>
- 
- Accuracy Rate:</br>
- ![image](https://github.com/user-attachments/assets/a3cb86f0-609a-4099-aae8-c6a9761d2a0a)</br>
+**Table 2: blacklist**
 
- **K-NEAREST NEIGHBORS**: Used for classification and regression.</br>
+![image](https://github.com/user-attachments/assets/61cda2b4-532f-4eb3-a92b-f2e0bcce4439)</br>
 
- Plot representation:</br>
- ![image](https://github.com/user-attachments/assets/7fedcd66-ed3a-45a2-bafd-b81803221f73)</br>
- 
- Accuracy Rate:</br>
- ![image](https://github.com/user-attachments/assets/cf7ca84e-f410-4bac-b6dd-788acb6bd256)</br>
+**Table 3: ifsccodes and swiftcode**
 
- **DECISION TREE CLASSIFIER**: Decision Tree Classifier acts as a predictive model which amps features to conclusions about the target value.</br>
+![image](https://github.com/user-attachments/assets/7bbae2c8-4fdb-4acd-bdc3-162d5f7adf99)</br>
 
- Classification report:</br>
- ![image](https://github.com/user-attachments/assets/b63e4913-1a86-4b53-bb24-143535f2fc1e)</br>
- 
- Accuracy Rate:</br>
- ![image](https://github.com/user-attachments/assets/39ac5bc9-4e7f-4492-ae44-4decf4d647bf)</br>
+### FLOWCHART:
 
- **RANDOM FOREST**: Random Forest is a machine learning algorithm that output the mode of classes and the mean prediction of individual trees.</br>
- Accuracy Rate:</br>
- ![image](https://github.com/user-attachments/assets/1abe17ec-55ce-49b1-a3b5-2e630a9529e8)</br>
+![image](https://github.com/user-attachments/assets/40ae0048-f2c1-49fe-905b-181f8efcd576)</br>
+
+
+### EXECUTION SCREENSHOT:</br>
+
+**CONDITION: 01**</br>
+
+If any of the account holder’s details is being matched with the default database named BLACK LIST, transaction gets denied. Here the details of people mentioned in blacklist is mentioned to show the execution of the program.</br>
+
+![image](https://github.com/user-attachments/assets/2d166fbb-69f0-4b23-ab17-7d05e3a9143e)</br>
+
+**CONDITION : 02**</br>
+
+If any of the account holder’s details is not been matched with the default database named BLACK LIST, transaction gets to proceed. Here the appropriate details of account holders are mentioned to show the execution of the program.</br>
+
+![image](https://github.com/user-attachments/assets/7d8acff1-1a14-4e88-8981-42997d24cea2)</br>
+
+![image](https://github.com/user-attachments/assets/8846618e-4ae0-492a-9046-d47c861923e7)</br>
+
 
 ### CONCLUSION:</br>
 
-![Screenshot 2024-08-05 194727](https://github.com/user-attachments/assets/52d0a16b-fad2-4b0a-883f-a439e4408d60)
+The **Transaction Monitoring System** helps banks prevent illegal fund transfers by comparing transaction details with a backend database of flagged entities. The system ensures secure and compliant transactions by using a real-time matching process, enhancing the overall integrity of financial operations. </br>
 
-The blue line represents the training accuracy and red line represents the test accuracy. Thus, it is concluded that the model is overfitted where the model excels in its performance on the training data but lacks the ability to generalize effectively to novel, unseen data.
-
-## LIBRARIES USED:</br>
-
-### For handling and manipulating data:
-[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)](https://pandas.pydata.org/)
-[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy)](https://numpy.org/)
-
-### For Visualization
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python)](https://matplotlib.org/)
-
-### For Hypothesis testing, Pre-processing and Model training
-[![Statsmodels](https://img.shields.io/badge/Statsmodels-3776AB?style=for-the-badge&logo=python)](https://www.statsmodels.org/)
-[![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn)](https://scikit-learn.org/)
-
-## Contact
+## Contact:</br>
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/madhulekha-r-4b981b256/)
